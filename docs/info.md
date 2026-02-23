@@ -9,12 +9,8 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This code implements an integrate-and-fire neuron. It takes an 8-bit input, which is accumulated onto an action potential. The action potential is implemented using 9 bits internally to handle overflows. The module outputs the 8 LSB bits of this action potential and an output spike (whenever the action potential exceeds 250).
 
 ## How to test
 
-Explain how to use your project
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Make rst_n low to drive the circuit to a known state initially. Make rst_n high again. Give a clock (clk) and some input voltage (ui_in). Keep track of the actual and expected action potential (uo_out) and the output spikes (uio_out[7]).
